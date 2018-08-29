@@ -33,7 +33,41 @@ body::-webkit-scrollbar { width: 0 !important }
   color:#0C0C0C;
 }
 
-
+.navbar{
+  position:fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar-option{
+  font-family: 'Unica One', cursive;
+  font-size: 1rem;
+  color: white;
+}
+.navbar-sm{
+  position:fixed;
+  z-index: 2;
+  display: none;
+  visibility: hidden;
+}
+.hidden-menu{
+position: fixed;
+right:0px;
+height: 100%;
+width: 60%;
+background-color: rgba(0,0,102,0.8);
+padding-top: 60px;
+padding-right: 50px;
+z-index: 1;
+display: none;
+visibility: hidden;
+color: white;
+text-align: right ;
+font-family: 'Unica One', cursive;
+}
+.hidden-menu-visible{
+  display: none;
+  visibility: hidden;
+}
 .section-1{
   background-image: url('../media/img/bc-section-1.png');
   background-size: cover;
@@ -138,4 +172,57 @@ body::-webkit-scrollbar { width: 0 !important }
 }
 .border{
   border: 1px solid grey;
+}
+
+/* menu hamburguer */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    visibility: hidden;
+}
+.hamtext{
+  cursor: pointer;
+  color:pink;
+  font: 'Unica One', cursive;
+}
+.hambar1, .hambar2, .hambar3 {
+    width: 35px;
+    height: 5px;
+    background-color: pink;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .hambar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .hambar2 {opacity: 0;}
+
+.change .hambar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media only screen and (max-width: 768px) {
+  .section-1-title h1{
+    font-size: 5rem !important;
+  }
+  .navbar{
+    display: none;
+    visibility: hidden;
+  }
+  .navbar-sm{
+    display:block;
+    visibility: visible;
+  }
+  .hamburger{
+    display:block;
+    visibility: visible;
+  }
+  .hidden-menu-visible{
+    display: block;
+    visibility: visible;
+  }
 }
